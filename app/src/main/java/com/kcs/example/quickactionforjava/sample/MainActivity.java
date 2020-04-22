@@ -1,10 +1,11 @@
-package com.kcs.example.quickactionforjava;
+package com.kcs.example.quickactionforjava.sample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 
+import com.kcs.example.quickactionforjava.R;
 import com.kcs.example.quickactionforjava.quickaction.ActionItem;
 import com.kcs.example.quickactionforjava.quickaction.QuickAction;
 
