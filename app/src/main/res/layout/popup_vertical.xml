@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="350dp"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
@@ -34,12 +34,13 @@
                 android:id="@+id/menu_etc_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/box_menu_etc_top" />
 
             <ImageView
+                android:layout_marginLeft="7dp"
                 android:id="@+id/arrow_up"
-                android:layout_width="20dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/box_menu_etc_arrow_up" />
         </FrameLayout>
@@ -56,10 +57,11 @@
             android:background="@drawable/box_menu_etc_bottom" />
 
         <ImageView
+            android:layout_marginLeft="7dp"
             android:id="@+id/arrow_down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:src="@drawable/box_menu_etc_arrow_down" />
 
     </FrameLayout>
