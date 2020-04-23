@@ -2,11 +2,10 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
 	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" 
+	android:layout_height="wrap_content"
 	android:clickable="true"
 	android:focusable="true"
-	android:gravity="center"
-	android:background="@drawable/box_menu_etc_cell_sel">
+	android:gravity="center">
         	
 	<ImageView
 		android:id="@+id/iv_icon" 
@@ -15,12 +14,12 @@
 		android:visibility="gone"/>
 	<ImageView
 		android:layout_width="wrap_content" 
-		android:layout_height="wrap_content"
+		android:layout_height="1dp"
 		android:background="@drawable/box_menu_etc_line"/>
 	<TextView 
 		android:id="@+id/tv_title"
 		android:layout_width="fill_parent" 
-		android:layout_height="0dp"
+		android:layout_height="50dp"
 		android:layout_weight="1" 
 		android:gravity="center"
 		android:text="Chart"
