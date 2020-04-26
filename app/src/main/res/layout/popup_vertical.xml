@@ -6,47 +6,51 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/arrow_up"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/box_menu_etc_arrow_up" />
-
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_marginTop="-10dp"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="0dp">
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
 
-        <FrameLayout
-            android:layout_width="@dimen/quick_vertical_width"
-            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="@dimen/quick_vertical_width"
+                android:layout_height="wrap_content">
 
-            <ScrollView
-                android:id="@+id/scroller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/box_stoke_black"
-                android:fadingEdgeLength="5dip"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:id="@+id/tracks"
+                <ScrollView
+                    android:id="@+id/scroller"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-            </ScrollView>
+                    android:background="@drawable/box_stoke_black"
+                    android:fadingEdgeLength="5dip"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/tracks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
 
 
-        </FrameLayout>
-    </androidx.cardview.widget.CardView>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/arrow_up"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/box_menu_etc_arrow_up" />
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/arrow_down"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-9dp"
         android:src="@drawable/box_menu_etc_arrow_down" />
     <!-- android:layout_marginTop="-4dip" -->
 

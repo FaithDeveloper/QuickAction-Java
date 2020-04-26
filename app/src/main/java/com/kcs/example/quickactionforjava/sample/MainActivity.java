@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.kcs.example.quickactionforjava.R;
 import com.kcs.example.quickactionforjava.quickaction.ActionItem;
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int ID_ITEM_3 = 3;
     private static final int ID_ITEM_4 = 4;
     private static final int ID_ITEM_5 = 5;
-    private static final int ID_CANCEL = 99;
 
     private int selectIdx = 0;
 
@@ -53,16 +53,10 @@ public class MainActivity extends AppCompatActivity {
         mQuickAction = new QuickAction(this, QuickAction.VERTICAL);
         mQuickAction.setOnActionItemClickListener(mActionClick);
 
-//        for(int itemIndex : itemArray) {
-//            ActionItem deletableItem = new ActionItem(itemIndex, "ITEM " + (itemIndex), null, selectIdx);
-//            mQuickAction.addActionItem(deletableItem); // add action items into QuickAction.
-//        }
-
-        ActionItem deletableItem = new ActionItem(ID_ITEM_1, "ITEM 1", null, selectIdx);
+        for(int itemIndex : itemArray) {
+            ActionItem deletableItem = new ActionItem(itemIndex, "ITEM " + (itemIndex), null, selectIdx);
             mQuickAction.addActionItem(deletableItem); // add action items into QuickAction.
-
-        ActionItem cancelItem = new ActionItem(ID_CANCEL, "취소", null,selectIdx);
-        mQuickAction.addActionItem(cancelItem);
+        }
     }
 
     /** 퀵 버튼 리스너 */
@@ -70,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onItemClick(QuickAction source, int pos, int actionId, int selectIdx) {
+            String msg = "";
+           if(actionId >= ID_ITEM_1 && actionId <= ID_ITEM_5){
+               Toast.makeText(MainActivity.this, String.format("ITEM %d 을 선택 하였습니다.", actionId), Toast.LENGTH_SHORT).show();
+           }
             mQuickAction.dismiss();
         }
     };
